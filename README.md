@@ -2,7 +2,7 @@
 
 ## Descripción del Proyecto
 
-PuntoNaranja es una aplicación móvil desarrollada con [React Native](https://reactnative.dev/) y [Expo](https://expo.dev/) que ayuda a localizar y solicitar ayuda en puntos naranjas de seguridad. Utiliza [TypeScript](https://react.dev/learn/typescript) y [TypeScriptXML] para un desarrollo robusto y seguro.
+PuntoNaranja es una aplicación móvil desarrollada con [React Native](https://reactnative.dev/) y [Expo](https://expo.dev/) que ayuda a localizar y solicitar ayuda en puntos naranjas de seguridad. Utiliza [TypeScript](https://react.dev/learn/typescript) para un desarrollo robusto y seguro.
 
 ---
 
@@ -14,9 +14,7 @@ PuntoNaranja es una aplicación móvil desarrollada con [React Native](https://r
 - [Configuración de Variables de Entorno](#configuración-de-variables-de-entorno)
 - [Instalación de Dependencias](#instalación-de-dependencias)
 - [Comandos Útiles](#comandos-útiles)
-- [Ejemplo Visual](#ejemplo-visual)
-- [Contribuyendo](#contribuyendo)
-- [Licencia](#licencia)
+- [Uso](#uso)
 
 ---
 
@@ -73,23 +71,23 @@ choco install -y nodejs-lts microsoft-openjdk17
 
 ### 4. Instalar Android Studio
 
-- Descarga desde [Android Studio](https://developer.android.com/studio)
-- Abre "SDK Manager" y en la pestaña **SDK Tools** selecciona:
-  - Intel x86 Emulator Accelerator (HAXM installer)
-  - Google Play services
-  - Android SDK Command-line tools
-  - Android SDK Platform-Tools
-- Si no aparece HAXM, agrega el sitio manualmente:
-  - Nombre: Intel HAXM
-  - URL: https://dl.google.com/android/repository/extras/intel/addon2-1.xml
+1. Descarga desde [Android Studio](https://developer.android.com/studio)
+2. Abre "SDK Manager" y en la pestaña **SDK Tools** selecciona:
+   - Intel x86 Emulator Accelerator (HAXM installer)
+   - Google Play services
+   - Android SDK Command-line tools
+   - Android SDK Platform-Tools
+3. Si no aparece HAXM, agrega el sitio manualmente:
+   - Nombre: Intel HAXM
+   - URL: https://dl.google.com/android/repository/extras/intel/addon2-1.xml
 
 ### 5. Crear un Dispositivo Virtual
 
-- Abre "Virtual Device Manager" en Android Studio.
-- Crea un nuevo dispositivo con:
-  - API: Api35 Vanillaicecream android15
-  - Services: Google APIs o Google Play
-  - System Image: Google APIs Intel x86 Atom System Image
+1. Abre "Virtual Device Manager" en Android Studio.
+2. Crea un nuevo dispositivo con:
+   - API: Api35 Vanillaicecream android15
+   - Services: Google APIs o Google Play
+   - System Image: Google APIs Intel x86 Atom System Image
 
 ---
 
@@ -97,10 +95,9 @@ choco install -y nodejs-lts microsoft-openjdk17
 
 1. **ANDROID_HOME**
    - Nombre: `ANDROID_HOME`
-   - Valor: Ruta a tu SDK, por ejemplo: Sdk
+   - Valor: Ruta a tu SDK, por ejemplo: `C:\Users\user\AppData\Local\Android\Sdk`
 2. **platform-tools**
-   - Nombre: `platform-tools`
-   - Valor: Ruta a platform-tools, por ejemplo: platform-tools
+   - Agrega la ruta a platform-tools a tu variable de entorno `PATH`, por ejemplo: `C:\Users\user\AppData\Local\Android\Sdk\platform-tools`
 3. Verifica en PowerShell:
    ```powershell
    Get-ChildItem -Path Env:\
@@ -162,3 +159,13 @@ choco install -y nodejs-lts microsoft-openjdk17
   ```
 
 ---
+
+## Uso
+
+1. Asegúrate de tener un emulador Android corriendo o un dispositivo conectado.
+2. En la terminal, ejecuta:
+   ```bash
+   npx expo start
+   ```
+3. Escanea el código QR con la app Expo Go o selecciona "Run on Android device/emulator" en la interfaz web de Expo.
+4. Sigue las instrucciones en pantalla para registrarte y comenzar a usar la app.
